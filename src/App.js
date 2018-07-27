@@ -22,7 +22,7 @@ export default class SetUP extends React.Component {
       ForgotPassword:{screen:ForgotPasswordScreen}
     }, {
         headerMode: 'none',
-        initialRouteName: 'Login',
+        initialRouteName: 'Signup',
         navigationOptions: {
           headerVisible: false,
         }

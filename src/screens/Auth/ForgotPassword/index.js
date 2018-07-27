@@ -28,7 +28,7 @@ const ForgotSteps = [
     title: 'Reset password.',
     subtitle: 'Verification',
     card: <cardComponents.CardComponent3 />,
-  },  
+  },
 ];
 
 
@@ -47,6 +47,9 @@ export default class ForgotPasswordScreen extends React.Component {
     this.state.nowStep++;
     this.forceUpdate();
   }
+  resetPassword() {
+
+  }
   render() {
     return (
       <ScrollView style={{ flex: 1, padding: 20, backgroundColor: 'white' }}>
@@ -61,14 +64,22 @@ export default class ForgotPasswordScreen extends React.Component {
             <Icon name='ios-arrow-round-back' style={{ color: '#97B5D8' }} />
             <Text style={{ color: '#97B5D8' }}> back</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => { this.forward() }} style={{ width: 120, height: 60 }}>
-            <LinearGradient colors={['#54AACF', 'white']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ width: 120, height: 60, alignItems: 'center', justifyContent: 'center', }}>
-              <Text style={{ color: 'white' }}>Next</Text>
-            </LinearGradient>
-          </TouchableOpacity>
+          {
+            this.state.nowStep != 2 ?
+              <TouchableOpacity onPress={() => { this.forward() }} style={{ width: 120, height: 60 }}>
+                <LinearGradient colors={['#54AACF', 'white']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ width: 120, height: 60, alignItems: 'center', justifyContent: 'center', }}>
+                  <Text style={{ color: 'white' }}>Next</Text>
+                </LinearGradient>
+              </TouchableOpacity> :
+              <TouchableOpacity onPress={() => { this.resetPassword() }} style={{ width: 170, height: 60 }}>
+                <LinearGradient colors={['#5AB985', '#33EBAE']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ width: 170, height: 60, alignItems: 'center', justifyContent: 'center', }}>
+                  <Text style={{ color: 'white' }}>Complete</Text>
+                </LinearGradient>
+              </TouchableOpacity>
+          }
         </View>
         <View style={{ flexDirection: 'row', paddingBottom: 30, marginTop: 50, justifyContent: 'center', alignContent: 'center' }}>
-          <TouchableOpacity onPress={() => {this.props.navigation.goBack() }} >
+          <TouchableOpacity onPress={() => { this.props.navigation.goBack() }} >
             <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic-Regular' }}>Log in</Text>
           </TouchableOpacity>
           <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic-Regular' }}>   |    </Text>
