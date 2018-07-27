@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, ScrollView, TextInput, Text, TouchableOpacity, Dimensions, Image, ImageBackground, StyleSheet } from 'react-native'
-import { Container, Icon } from 'native-base'
+import { Icon } from 'native-base'
 
 import LinearGradient from 'react-native-linear-gradient'
 
@@ -8,10 +8,6 @@ import styles from './style'
 
 import logo from '../../../assets/img/logo.png'
 import loginForm from '../../../assets/img/loginform.png'
-
-
-const { width, height } = Dimensions.get('window');
-
 
 export default class LoginScreen extends React.Component {
   constructor(props) {
@@ -48,20 +44,20 @@ export default class LoginScreen extends React.Component {
                 name={this.state.pass_show ? 'eye-off' : 'eye'}
                 type='Feather'
                 onPress={() => { this.state.pass_show = !this.state.pass_show; this.forceUpdate() }}
-                style={{ color: '#D9D9D9' }}
+                style={styles.eye_icon}
               />
             </View>
           </ImageBackground>
-          <TouchableOpacity style={{ backgroundColor: '#EF9E1A', height: 60, marginHorizontal: 10, justifyContent: 'center', alignItems: 'center' }} onPress={() => { }}>
-            <Text style={{ color: 'white', fontSize: 20, fontFamily:'NanumGothicBold' }}>Login</Text>
+          <TouchableOpacity style={styles.login_btn} onPress={() => { }}>
+            <Text style={styles.login_btn_txt}>Login</Text>
           </TouchableOpacity>
-          <View style={{ flexDirection: 'row', paddingBottom: 30, marginTop: 50, justifyContent: 'center', alignContent: 'center' }}>
+          <View style={styles.forgot_view}>
             <TouchableOpacity onPress={() => { this.props.navigation.navigate('ForgotPassword') }}>
-              <Text style={{ color: 'white', fontSize: 16, fontFamily:'NanumGothic' }}>Forgot password?</Text>
+              <Text style={styles.forgot_text}>Forgot password?</Text>
             </TouchableOpacity>
-            <Text style={{ color: 'white', fontSize: 16, fontFamily:'NanumGothic' }}>   |   </Text>
+            <Text style={styles.forgot_text}>   |   </Text>
             <TouchableOpacity onPress={() => { this.props.navigation.navigate('Signup') }}  >
-              <Text style={{ color: 'white', fontSize: 16, fontFamily:'NanumGothicBold' }}>Sign up</Text>
+              <Text style={styles.forgot_text}>Sign up</Text>
             </TouchableOpacity>
           </View>
         </LinearGradient>

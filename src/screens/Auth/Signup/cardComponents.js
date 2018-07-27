@@ -35,7 +35,7 @@ class CardComponent1 extends React.Component {
         <View style={[styles.input_view, { borderBottomColor: this.state.email_focus ? '#4A90E2' : '#D9D9D9' }]}>
           <TextInput
             value={this.state.email}
-            onChangeText={(email) => { this.setState({ email: email }) }}
+            onChangeText={(email) => { this.setState({ email: email }); this.props.onValueChage(this.state.email, this, state.password, this.state.readiness) }}
             onFocus={() => { this.setState({ email_focus: true }) }}
             onBlur={() => { this.setState({ email_focus: false }) }}
             placeholder={'E-mail or phone number'}
@@ -47,7 +47,7 @@ class CardComponent1 extends React.Component {
         <View style={[styles.input_view, { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', borderBottomColor: this.state.pass_focus ? '#4A90E2' : '#D9D9D9' }]}>
           <TextInput
             value={this.state.password}
-            onChangeText={(password) => { this.setState({ password: password }) }}
+            onChangeText={(password) => { this.setState({ password: password }); this.props.onValueChage(this.state.email, this, state.password, this.state.readiness) }}
             onFocus={() => { this.setState({ pass_focus: true }) }}
             onBlur={() => { this.setState({ pass_focus: false }) }}
             placeholder={'password'}
@@ -64,7 +64,7 @@ class CardComponent1 extends React.Component {
           />
         </View>
         <View style={{ flexDirection: 'row', marginTop: 30 }}>
-          <CheckBox checked={this.state.readiness} color='#D9D9D9' onPress={() => { this.state.readiness = !this.state.readiness; this.forceUpdate(); }} />
+          <CheckBox checked={this.state.readiness} color='#D9D9D9' onPress={() => { this.state.readiness = !this.state.readiness; this.forceUpdate();; this.props.onValueChage(this.state.email, this, state.password, this.state.readiness) }} />
           <View style={{ paddingLeft: 20 }}>
             <Text style={{ color: '#D9D9D9', fontSize: 16 }}>{'I have read and agree to'}</Text>
             <TouchableOpacity onPress={() => { }} style={{ flexWrap: 'wrap' }}>
@@ -194,18 +194,18 @@ class CardComponent4 extends React.Component {
           ref={ref => this.ref = ref}
           code={this.state.pincode}
           number={5}
-          success={() => this.verify_Code()}         
+          success={() => this.verify_Code()}
           obfuscation
           text={''}
           error={''}
-          containerStyle={{width:width-120, height:80, justifyContent:'center', margin:0}}
-          containerPinStyle={{justifyContent:'center', height:80, width:width-120,  paddingTop: 0,}}
-          pinStyle={{borderColor:'#B8E986', backgroundColor:'#F6FFED', borderWidth:1, width:80, height:40, marginRight:5, marginLeft:5, marginTop:-80}}
-          textStyle={{ fontSize: 16, fontFamily: 'NanumGothic' }}
+          containerStyle={{ width: width - 120, height: 80, justifyContent: 'center', margin: 0 }}
+          containerPinStyle={{ justifyContent: 'center', height: 80, width: width - 120, paddingTop: 0, }}
+          pinStyle={{ borderColor: '#B8E986', backgroundColor: '#F6FFED', borderWidth: 1, width: 80, height: 40, marginRight: 5, marginLeft: 5, marginTop: -80 }}
+          textStyle={{ fontSize: 16, fontFamily: 'NanumGothic-Regular' }}
           keyboardType="numeric"
         />
-        <Text style={{fontFamily:'NanumGothicBold', fontSize:16, color:'#9C9C9C', marginBottom:40}}>Enter 5 digit verification code that we sent you in sms.</Text>
-        <Text style={{fontFamily:'NanumGothicBold', fontSize:14, color:'#50E3C2'}}>Send again to 010-123-4567</Text>
+        <Text style={{ fontFamily: 'NanumGothic-Bold', fontSize: 16, color: '#9C9C9C', marginBottom: 40 }}>Enter 5 digit verification code that we sent you in sms.</Text>
+        <Text style={{ fontFamily: 'NanumGothic-Bold', fontSize: 14, color: '#50E3C2' }}>Send again to 010-123-4567</Text>
       </Card>
     )
   }
