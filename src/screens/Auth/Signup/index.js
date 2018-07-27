@@ -75,11 +75,11 @@ export default class SignupScreen extends React.Component {
         </View>
         <View style={{ flexDirection: 'row', paddingBottom: 30, marginTop: 50, justifyContent: 'center', alignContent: 'center' }}>
           <TouchableOpacity onPress={() => {this.props.navigation.navigate('ForgotPassword') }} >
-            <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic-Regular' }}>Forgot password?</Text>
+            <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic' }}>Forgot password?</Text>
           </TouchableOpacity>
-          <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic-Regular' }}>   |    </Text>
+          <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic' }}>   |    </Text>
           <TouchableOpacity onPress={() => { this.props.navigation.goBack() }}  >
-            <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic-Bold' }}>Log in</Text>
+            <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothicBold' }}>Log in</Text>
           </TouchableOpacity>
         </View>
       </ScrollView >

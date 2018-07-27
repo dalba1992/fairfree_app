@@ -11,12 +11,12 @@ export default {
     height: 70
   },
   welcome_text: {
-    fontFamily: 'NanumGothic-ExtraBold',
+    fontFamily: 'NanumGothicExtraBold',
     color: 'white',
     fontSize: 40, 
   },
   sub_text: {
-    fontFamily: 'NanumGothic-Bold',
+    fontFamily: 'NanumGothicBold',
     color: 'white',
     fontSize: 18,
     marginBottom: 20,
@@ -35,7 +35,7 @@ export default {
     borderBottomWidth: 1,
   },
   input:{
-    fontFamily: 'NanumGothic-Bold',
+    fontFamily: 'NanumGothicBold',
     color:'#4A90E2'
   }
 }

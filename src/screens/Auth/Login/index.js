@@ -53,15 +53,15 @@ export default class LoginScreen extends React.Component {
             </View>
           </ImageBackground>
           <TouchableOpacity style={{ backgroundColor: '#EF9E1A', height: 60, marginHorizontal: 10, justifyContent: 'center', alignItems: 'center' }} onPress={() => { }}>
-            <Text style={{ color: 'white', fontSize: 20, fontFamily:'NanumGothic-Bold' }}>Login</Text>
+            <Text style={{ color: 'white', fontSize: 20, fontFamily:'NanumGothicBold' }}>Login</Text>
           </TouchableOpacity>
           <View style={{ flexDirection: 'row', paddingBottom: 30, marginTop: 50, justifyContent: 'center', alignContent: 'center' }}>
             <TouchableOpacity onPress={() => { this.props.navigation.navigate('ForgotPassword') }}>
-              <Text style={{ color: 'white', fontSize: 16, fontFamily:'NanumGothic-Regular' }}>Forgot password?</Text>
+              <Text style={{ color: 'white', fontSize: 16, fontFamily:'NanumGothic' }}>Forgot password?</Text>
             </TouchableOpacity>
-            <Text style={{ color: 'white', fontSize: 16, fontFamily:'NanumGothic-Regular' }}>   |   </Text>
+            <Text style={{ color: 'white', fontSize: 16, fontFamily:'NanumGothic' }}>   |   </Text>
             <TouchableOpacity onPress={() => { this.props.navigation.navigate('Signup') }}  >
-              <Text style={{ color: 'white', fontSize: 16, fontFamily:'NanumGothic-Bold' }}>Sign up</Text>
+              <Text style={{ color: 'white', fontSize: 16, fontFamily:'NanumGothicBold' }}>Sign up</Text>
             </TouchableOpacity>
           </View>
         </LinearGradient>

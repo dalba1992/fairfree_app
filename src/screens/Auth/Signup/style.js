@@ -4,10 +4,10 @@ export default {
   title: {
     color: '#3C504C',
     fontSize: 40,
-    fontFamily: 'NanumGothic-ExtraBold',
+    fontFamily: 'NanumGothicExtraBold',
   },
   sub_title: {
-    fontFamily: 'NanumGothic-Bold',
+    fontFamily: 'NanumGothicBold',
     fontSize: 18,
     marginVertical: 10,
     color: '#92A4A0'
@@ -32,6 +32,6 @@ export default {
     borderBottomWidth: 1,
   },
   input:{
-    fontFamily: 'NanumGothic-Bold',
+    fontFamily: 'NanumGothicBold',
   },
 }
