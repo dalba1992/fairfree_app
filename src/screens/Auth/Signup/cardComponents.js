@@ -106,7 +106,7 @@ class CardComponent2 extends React.Component {
           />
         </View>
         <View style={{ marginTop: 15 }}>
-          <Text style={{ color: '#9C9C9C', fontFamily: 'NanumGothic-Bold', fontSize: 16 }}>Age and gender</Text>
+          <Text style={{ color: '#9C9C9C', fontFamily: 'NanumGothicBold', fontSize: 16 }}>Age and gender</Text>
           <Dropdown
             data={Ages}
             dropdownOffset={{ top: 5, left: 10, bottom: 0 }}
@@ -117,21 +117,21 @@ class CardComponent2 extends React.Component {
             underlineColorAndroid='transparent'
             textColor='black'
             itemColor='black'
-            itemTextStyle={{ fontFamily: 'NanumGothic-Regular', fontSize: 16 }}
+            itemTextStyle={{ fontFamily: 'NanumGothic', fontSize: 16 }}
             renderAccessory={this.renderAccessory}
             onChangeText={(text, id) => { this.setState({ age: text }); }}
           />
         </View>
         <View style={{ flexDirection: 'row', borderWidth: 1, borderColor: '#A2A2A2', marginTop: 5 }}>
           <TouchableOpacity onPress={() => { this.setState({ gender: 'male' }) }} style={[this.state.gender == 'male' ? { backgroundColor: '#4A90E2' } : { backgroundColor: 'transparent' }, { width: (width - 120) / 2, height: 40, justifyContent: 'center', alignItems: 'center' }]}>
-            <Text style={[this.state.gender == 'male' ? { color: 'white' } : { color: 'black' }, { fontFamily: 'NanumGothic-Bold', fontSize: 16 }]}>Male</Text>
+            <Text style={[this.state.gender == 'male' ? { color: 'white' } : { color: 'black' }, { fontFamily: 'NanumGothicBold', fontSize: 16 }]}>Male</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => { this.setState({ gender: 'female' }) }} style={[this.state.gender == 'female' ? { backgroundColor: '#4A90E2' } : { backgroundColor: 'transparent' }, { width: (width - 120) / 2, height: 40, justifyContent: 'center', alignItems: 'center' }]}>
-            <Text style={[this.state.gender == 'female' ? { color: 'white' } : { color: 'black' }, { fontFamily: 'NanumGothic-Bold', fontSize: 16 }]}>Female</Text>
+            <Text style={[this.state.gender == 'female' ? { color: 'white' } : { color: 'black' }, { fontFamily: 'NanumGothicBold', fontSize: 16 }]}>Female</Text>
           </TouchableOpacity>
         </View>
         <View style={{ marginTop: 10 }}>
-          <Text style={{ color: '#9C9C9C', fontFamily: 'NanumGothic-Bold', fontSize: 16 }}>Location</Text>
+          <Text style={{ color: '#9C9C9C', fontFamily: 'NanumGothicBold', fontSize: 16 }}>Location</Text>
           <Dropdown
             data={Locations}
             dropdownOffset={{ top: 5, left: 10, bottom: 0 }}
@@ -141,7 +141,7 @@ class CardComponent2 extends React.Component {
             underlineColorAndroid='transparent'
             textColor='black'
             itemColor='black'
-            itemTextStyle={{ fontFamily: 'NanumGothic-Regular', fontSize: 16 }}
+            itemTextStyle={{ fontFamily: 'NanumGothic', fontSize: 16 }}
             renderAccessory={this.renderAccessory}
             onChangeText={(text, id) => { this.setState({ age: text }); }}
           />
@@ -161,7 +161,7 @@ class CardComponent3 extends React.Component {
   render() {
     return (
       <Card style={styles.card}>
-        <Text style={{ color: '#9C9C9C', fontFamily: 'NanumGothic-Bold', fontSize: 16, marginTop: 20 }}>We will send you a one time sms message. This may take up to 1-minute.</Text>
+        <Text style={{ color: '#9C9C9C', fontFamily: 'NanumGothicBold', fontSize: 16, marginTop: 20 }}>We will send you a one time sms message. This may take up to 1-minute.</Text>
         <View style={[styles.input_view, { borderBottomColor: /*this.state.email_focus ?*/ '#4A90E2' /*: '#D9D9D9'*/, marginTop: 30 }]}>
           <TextInput
             value={this.state.phone}

@@ -31,7 +31,7 @@ class CardComponent1 extends React.Component {
   render() {
     return (
       <Card style={styles.card}>
-        <Text style={{ color: '#9C9C9C', fontFamily: 'NanumGothic-Bold', fontSize: 16, marginTop: 20 }}>
+        <Text style={{ color: '#9C9C9C', fontFamily: 'NanumGothicBold', fontSize: 16, marginTop: 20 }}>
           Please enter your e-mail address or phone number that you used for the sign up. We will send 5-digit verification code.
         </Text>
         <View style={[styles.input_view, { borderBottomColor: /*this.state.email_focus ?*/ '#4A90E2' /*: '#D9D9D9'*/, marginTop: 30 }]}>
@@ -73,13 +73,13 @@ class CardComponent2 extends React.Component {
           containerStyle={{ width: width - 120, height: 80, justifyContent: 'center', margin: 0 }}
           containerPinStyle={{ justifyContent: 'center', height: 80, width: width - 120, paddingTop: 0, }}
           pinStyle={{ borderColor: '#FAC369', backgroundColor: '#FFF5E5', borderWidth: 1, width: 80, height: 40, marginRight: 5, marginLeft: 5, marginTop: -80 }}
-          textStyle={{ fontSize: 16, fontFamily: 'NanumGothic-Regular' }}
+          textStyle={{ fontSize: 16, fontFamily: 'NanumGothic' }}
           keyboardType="numeric"
         />
-        <Text style={{ fontFamily: 'NanumGothic-Bold', fontSize: 16, color: '#9C9C9C', marginBottom: 40 }}>
+        <Text style={{ fontFamily: 'NanumGothicBold', fontSize: 16, color: '#9C9C9C', marginBottom: 40 }}>
           Enter 5 digit verification code that we sent you in e-mail.
         </Text>
-        <Text style={{ fontFamily: 'NanumGothic-Bold', fontSize: 14, color: '#50E3C2' }}>
+        <Text style={{ fontFamily: 'NanumGothicBold', fontSize: 14, color: '#50E3C2' }}>
           Send again to fairfree@gmail.com
         </Text>
       </Card>

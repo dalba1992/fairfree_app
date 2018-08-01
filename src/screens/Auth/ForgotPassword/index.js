@@ -82,9 +82,9 @@ export default class ForgotPasswordScreen extends React.Component {
           <TouchableOpacity onPress={() => { this.props.navigation.goBack() }} >
             <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic-Regular' }}>Log in</Text>
           </TouchableOpacity>
-          <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic-Regular' }}>   |    </Text>
+          <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic' }}>   |    </Text>
           <TouchableOpacity onPress={() => { this.props.navigation.navigate('Signup') }}  >
-            <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothic-Bold' }}>Sign up</Text>
+            <Text style={{ color: '#717171', fontSize: 18, fontFamily: 'NanumGothicBold' }}>Sign up</Text>
           </TouchableOpacity>
         </View>
       </ScrollView >
